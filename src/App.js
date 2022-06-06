@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import { NavigationMenu } from 'components/NavigationMenu'
 
-function App() {
+const menu = [
+  {
+    to: '#',
+    icon: 'home-outline',
+    title: 'Home'
+  },
+  {
+    to: '#',
+    icon: 'person-outline',
+    title: 'Profile'
+  },
+  {
+    to: '#',
+    icon: 'chatbubble-outline',
+    title: 'Messages'
+  },
+  {
+    to: '#',
+    icon: 'camera-outline',
+    title: 'Photos'
+  },
+  {
+    to: '#',
+    icon: 'settings-outline',
+    title: 'Settings'
+  }
+]
+
+function App () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <NavigationMenu menu={menu} />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
